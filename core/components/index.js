@@ -1,3 +1,6 @@
+/* resets for font */
+import { resets, apply } from './_helpers/globals'
+
 import {
   Alert,
   AppLayout,
@@ -50,6 +53,10 @@ import {
   StackLayout
 } from './components'
 
+if (process && process.env && process.env.COSMOS_MANUAL_RESETS) {
+  apply()
+}
+
 export {
   Alert,
   AppLayout,
@@ -99,5 +106,6 @@ export {
   GalleryLayout,
   RowLayout,
   PageLayout,
-  StackLayout
+  StackLayout,
+  resets
 }
